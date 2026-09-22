@@ -1,0 +1,69 @@
+[19:26:07.027] ============================================================
+[19:26:07.027] \U0001f9ea SeqAtt-UNet PHASE 4 (Skip-CBAM) TESTING
+[19:26:07.027] ============================================================
+[19:26:07.027] Dataset:                Synapse
+[19:26:07.027] Model (Skip-CBAM):      ..\model\TU_Synapse224_CBAM_BILSTM_Phase3_DS_SkipCBAM\TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s1234\best_model.pth
+[19:26:07.028] CBAM:                   True
+[19:26:07.028] MLP Type:               bilstm
+[19:26:07.028] Skip-CBAM reduction:    8
+[19:26:07.032] TTA:                    simple
+[19:26:07.032] ============================================================
+[19:26:22.035] \u2713 Built VisionTransformerSkipCBAM with DS DISABLED for inference
+[19:26:22.820] \u2713 Loaded checkpoint
+[19:26:22.822] 
+\U0001f4ca CBAM Alpha Values:
+[19:26:22.822]    transformer.embeddings.hybrid_model.cbam1.alpha_raw: -2.3017
+[19:26:22.822]    transformer.embeddings.hybrid_model.cbam2.alpha_raw: -2.3209
+[19:26:22.822]    transformer.embeddings.hybrid_model.cbam3.alpha_raw: -2.1578
+[19:26:22.822]    decoder.blocks.0.skip_cbam.alpha_raw: -2.3209
+[19:26:22.822]    decoder.blocks.1.skip_cbam.alpha_raw: -2.2869
+[19:26:22.822]    decoder.blocks.2.skip_cbam.alpha_raw: -2.1712
+[19:26:22.826] 
+[Skip-CBAM \u03b1 values after training]
+[19:26:22.826]    encoder_cbam1: 0.0954
+[19:26:22.826]    encoder_cbam2: 0.0937
+[19:26:22.827]    encoder_cbam3: 0.1094
+[19:26:22.827]    encoder_skip_cbam: 0.1080
+[19:26:22.827]    skip_cbam_block0: 0.0937
+[19:26:22.827]    skip_cbam_block1: 0.0967
+[19:26:22.827]    skip_cbam_block2: 0.1080
+[19:26:22.827] \U0001f4d0 HD95 voxelspacing: (0.76, 0.76)
+[19:26:22.858] 
+============================================================
+[19:26:22.858] Testing on 12 volumes
+[19:26:22.858] TTA: simple
+[19:26:22.858] Voxelspacing (mm): (0.76, 0.76) | report_both_units=True
+[19:26:22.858] ============================================================
+[19:32:10.738] case0008: DSC=0.6724, HD95_vox=9.79, HD95_mm=8.36
+[19:35:42.682] case0022: DSC=0.9075, HD95_vox=20.57, HD95_mm=15.94
+[19:39:36.527] case0038: DSC=0.7930, HD95_vox=12.73, HD95_mm=10.53
+[19:47:01.004] case0036: DSC=0.8544, HD95_vox=5.23, HD95_mm=4.62
+[19:52:33.057] case0032: DSC=0.7756, HD95_vox=18.95, HD95_mm=15.12
+[19:57:52.920] case0002: DSC=0.8623, HD95_vox=21.55, HD95_mm=17.32
+[20:01:44.789] case0029: DSC=0.7538, HD95_vox=39.17, HD95_mm=30.09
+[20:09:39.347] case0003: DSC=0.5380, HD95_vox=100.60, HD95_mm=79.69
+[20:15:32.100] case0001: DSC=0.8193, HD95_vox=10.17, HD95_mm=8.93
+[20:21:05.912] case0004: DSC=0.8124, HD95_vox=7.84, HD95_mm=6.46
+[20:24:22.182] case0025: DSC=0.9041, HD95_vox=2.24, HD95_mm=1.98
+[20:27:42.657] case0035: DSC=0.8980, HD95_vox=3.49, HD95_mm=3.05
+[20:27:42.669] 
+============================================================
+[20:27:42.669] PER-CLASS RESULTS:
+[20:27:42.669] ============================================================
+[20:27:42.669] Aorta          : DSC=0.8873, HD95_vox=8.12, HD95_mm=6.84
+[20:27:42.670] Gallbladder    : DSC=0.6616, HD95_vox=27.63, HD95_mm=21.51
+[20:27:42.670] Kidney(L)      : DSC=0.7931, HD95_vox=39.22, HD95_mm=30.72
+[20:27:42.670] Kidney(R)      : DSC=0.8003, HD95_vox=41.93, HD95_mm=32.36
+[20:27:42.670] Liver          : DSC=0.9424, HD95_vox=14.93, HD95_mm=12.92
+[20:27:42.670] Pancreas       : DSC=0.6506, HD95_vox=10.16, HD95_mm=8.44
+[20:27:42.670] Spleen         : DSC=0.8764, HD95_vox=12.24, HD95_mm=9.95
+[20:27:42.670] Stomach        : DSC=0.7820, HD95_vox=13.99, HD95_mm=12.00
+[20:27:42.670] 
+============================================================
+[20:27:42.670] \U0001f4ca FINAL RESULTS (Phase 4 Skip-CBAM)
+[20:27:42.670] ============================================================
+[20:27:42.670]   Mean Dice:         0.7992 (79.92%)
+[20:27:42.670]   Mean HD95 (voxel): 21.0275
+[20:27:42.671]   Mean HD95 (mm):    16.8415  [voxelspacing=(0.76, 0.76)]
+[20:27:42.671]   TTA:               simple
+[20:27:42.671] ============================================================

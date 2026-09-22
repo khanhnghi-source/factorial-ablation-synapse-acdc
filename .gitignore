@@ -1,0 +1,46 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.so
+build/
+dist/
+*.egg-info/
+
+# --- Environments ---
+venv/
+env/
+.venv/
+.env
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# --- Data and weights: never commit ---
+*.npz
+*.h5
+*.nii
+*.nii.gz
+*.dcm
+*.pth
+*.pt
+*.ckpt
+data/
+model/
+predictions/
+
+# --- Documents that must not reach a public repository ---
+References/
+*.pdf
+*.docx
+*.pptx
+Turnitin*/
+REVIEWER_COMMENTS*
+RESPONSE_LETTER*
+EMAIL_*

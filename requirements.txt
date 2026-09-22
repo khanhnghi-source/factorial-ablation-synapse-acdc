@@ -1,0 +1,36 @@
+# SeqAtt-UNet Phase 3 - Python dependencies
+# Tested with Python 3.10 and 3.12 on Windows
+# After setting up venv successfully, run `pip freeze > requirements-frozen.txt`
+# to pin exact versions.
+
+# torch / torchvision: install separately with CUDA index URL
+# pip install torch==2.4.1 torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cu121
+# Do NOT pip-upgrade torch from PyPI default (would install CPU-only build)
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+scikit-image>=0.21.0
+medpy>=0.4.0
+SimpleITK>=2.3.0
+h5py>=3.9.0
+tensorboard>=2.13.0
+tensorboardX>=2.6.0
+einops>=0.7.0
+ml_collections>=0.1.1
+PyYAML>=6.0
+tqdm>=4.65.0
+nibabel>=5.1.0
+timm>=0.9.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+Pillow>=10.0.0
+
+# Excel & DOCX (read KetQua.xlsx and paper draft)
+openpyxl>=3.1.0
+python-docx>=1.0.0
+
+# Dev tools
+ruff>=0.1.0
+pytest>=7.4.0

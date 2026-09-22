@@ -1,0 +1,37 @@
+SeqAtt-UNet ablation study
+Copyright 2026 The Authors
+
+This product includes software developed as part of TransUNet
+(https://github.com/Beckschen/TransUNet), Copyright the TransUNet authors,
+licensed under the Apache License, Version 2.0:
+
+    Chen, J., Lu, Y., Yu, Q., Luo, X., Adeli, E., Wang, Y., Lu, L.,
+    Yuille, A. L., and Zhou, Y. "TransUNet: Transformers Make Strong Encoders
+    for Medical Image Segmentation." arXiv:2102.04306, 2021.
+
+TransUNet in turn builds on the Vision Transformer implementation released by
+Google Research (https://github.com/google-research/vision_transformer), also
+Apache-2.0.
+
+The files listed below are derived from TransUNet and have been modified. Each
+one carries a notice to that effect at the top of the file, as Section 4(b) of
+the Apache License requires.
+
+    SeqAtt_UNet/train_phase3.py
+    SeqAtt_UNet/trainer_phase3.py
+    SeqAtt_UNet/test_phase3.py
+    SeqAtt_UNet/train_skip_cbam.py
+    SeqAtt_UNet/test_skip_cbam.py
+    SeqAtt_UNet/utils.py
+    SeqAtt_UNet/losses.py
+    SeqAtt_UNet/deep_supervision.py
+    SeqAtt_UNet/inference_tta.py
+    SeqAtt_UNet/networks/resnet_cbam.py
+    SeqAtt_UNet/networks/skip_cbam.py
+    SeqAtt_UNet/networks/vit_seg_configs.py
+    SeqAtt_UNet/networks/vit_seg_modeling_phase3.py
+    SeqAtt_UNet/networks/vit_seg_modeling_xlstm.py
+    SeqAtt_UNet/datasets/dataset_synapse.py
+    SeqAtt_UNet/datasets/dataset_acdc.py
+
+All other files in this repository were written for the present study.

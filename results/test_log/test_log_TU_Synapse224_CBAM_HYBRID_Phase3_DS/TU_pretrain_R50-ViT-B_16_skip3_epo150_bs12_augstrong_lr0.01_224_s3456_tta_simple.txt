@@ -1,0 +1,120 @@
+[08:14:46.896] ============================================================
+[08:14:46.896] \U0001f9ea SeqAtt-UNet PHASE 3 TESTING
+[08:14:46.896] ============================================================
+[08:14:46.896] Dataset:          Synapse
+[08:14:46.896] Model:            ../model\TU_Synapse224_CBAM_HYBRID_Phase3_DS\TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s3456\best_model.pth
+[08:14:46.896] Deep Supervision: True
+[08:14:46.897] CBAM:             True
+[08:14:46.897] MLP Type:         hybrid
+[08:14:46.897] TTA:              simple
+[08:14:46.897] Classes:          9
+[08:14:46.898] ============================================================
+[08:14:50.869] \u2713 Deep Supervision DISABLED for inference (single output)
+[08:14:51.498] \u2713 Loaded model from ../model\TU_Synapse224_CBAM_HYBRID_Phase3_DS\TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s3456\best_model.pth
+[08:14:51.503] 
+\U0001f4ca CBAM Alpha Values:
+[08:14:51.503]    transformer.embeddings.hybrid_model.cbam1.alpha_raw: -2.2875
+[08:14:51.503]    transformer.embeddings.hybrid_model.cbam2.alpha_raw: -2.2828
+[08:14:51.504]    transformer.embeddings.hybrid_model.cbam3.alpha_raw: -2.2230
+[08:14:51.504] \U0001f4c1 Predictions will be saved to: ../predictions\TU_Synapse224_CBAM_HYBRID_Phase3_DS_TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s3456_tta_simple
+[08:14:51.524] 
+============================================================
+[08:14:51.524] Testing on 12 volumes
+[08:14:51.524] TTA: simple
+[08:14:51.524] ============================================================
+[08:18:14.210] case0008: DSC=0.6588, HD95=9.60
+[08:20:10.137] case0022: DSC=0.9075, HD95=20.39
+[08:22:20.557] case0038: DSC=0.8029, HD95=15.11
+[08:26:29.751] case0036: DSC=0.8588, HD95=5.02
+[08:29:41.927] case0032: DSC=0.8474, HD95=10.85
+[08:32:46.840] case0002: DSC=0.8814, HD95=20.49
+[08:34:56.738] case0029: DSC=0.7351, HD95=38.93
+[08:39:24.963] case0003: DSC=0.5216, HD95=103.80
+[08:42:42.587] case0001: DSC=0.8099, HD95=17.53
+[08:45:48.586] case0004: DSC=0.8120, HD95=6.49
+[08:47:39.451] case0025: DSC=0.8864, HD95=28.20
+[08:49:35.417] case0035: DSC=0.8995, HD95=2.81
+[08:49:35.426] 
+============================================================
+[08:49:35.426] PER-CLASS RESULTS:
+[08:49:35.426] ============================================================
+[08:49:35.427] Aorta          : DSC=0.8815, HD95=8.68
+[08:49:35.427] Gallbladder    : DSC=0.6681, HD95=27.76
+[08:49:35.427] Kidney(L)      : DSC=0.7897, HD95=38.80
+[08:49:35.427] Kidney(R)      : DSC=0.7973, HD95=45.22
+[08:49:35.427] Liver          : DSC=0.9467, HD95=16.05
+[08:49:35.427] Pancreas       : DSC=0.6327, HD95=11.06
+[08:49:35.427] Spleen         : DSC=0.8909, HD95=28.59
+[08:49:35.428] Stomach        : DSC=0.8073, HD95=9.99
+[08:49:35.428] 
+============================================================
+[08:49:35.428] \U0001f4ca FINAL RESULTS
+[08:49:35.428] ============================================================
+[08:49:35.428]   Mean Dice: 0.8018 (80.18%)
+[08:49:35.428]   Mean HD95: 23.27
+[08:49:35.429]   TTA:       simple
+[08:49:35.429] ============================================================
+[08:49:35.429]   Predictions saved to: ../predictions\TU_Synapse224_CBAM_HYBRID_Phase3_DS_TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s3456_tta_simple
+[08:49:35.429] 
+\U0001f4dd Log saved to: ./test_log/test_log_TU_Synapse224_CBAM_HYBRID_Phase3_DS\TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s3456_tta_simple.txt
+[07:42:10.435] ============================================================
+[07:42:10.435] \U0001f9ea SeqAtt-UNet PHASE 3 TESTING
+[07:42:10.435] ============================================================
+[07:42:10.435] Dataset:          Synapse
+[07:42:10.435] Model:            ../model\TU_Synapse224_CBAM_HYBRID_Phase3_DS\TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s3456\best_model.pth
+[07:42:10.435] Deep Supervision: True
+[07:42:10.435] CBAM:             True
+[07:42:10.435] MLP Type:         hybrid
+[07:42:10.435] TTA:              simple
+[07:42:10.435] Classes:          9
+[07:42:10.435] ============================================================
+[07:42:14.805] \u2713 Deep Supervision DISABLED for inference (single output)
+[07:42:15.785] \u2713 Loaded model from ../model\TU_Synapse224_CBAM_HYBRID_Phase3_DS\TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s3456\best_model.pth
+[07:42:15.791] 
+\U0001f4ca CBAM Alpha Values:
+[07:42:15.791]    transformer.embeddings.hybrid_model.cbam1.alpha_raw: -2.2875
+[07:42:15.791]    transformer.embeddings.hybrid_model.cbam2.alpha_raw: -2.2828
+[07:42:15.791]    transformer.embeddings.hybrid_model.cbam3.alpha_raw: -2.2230
+[07:42:15.791] \U0001f4d0 HD95 voxelspacing setting: (0.76, 0.76)
+[07:42:15.791]     \u2192 M\u1eb7c \u0111\u1ecbnh Synapse: (0.76, 0.76)
+[07:42:15.808] 
+============================================================
+[07:42:15.808] Testing on 12 volumes
+[07:42:15.808] TTA: simple
+[07:42:15.808] Voxelspacing (mm): (0.76, 0.76) | report_both_units=True
+[07:42:15.808] ============================================================
+[07:47:01.390] case0008: DSC=0.6588, HD95_vox=9.60, HD95_mm=8.13
+[07:49:44.963] case0022: DSC=0.9075, HD95_vox=20.39, HD95_mm=15.79
+[07:52:49.449] case0038: DSC=0.8029, HD95_vox=15.11, HD95_mm=12.34
+[07:58:47.274] case0036: DSC=0.8588, HD95_vox=5.02, HD95_mm=4.29
+[08:03:21.830] case0032: DSC=0.8474, HD95_vox=10.85, HD95_mm=9.11
+[08:07:45.292] case0002: DSC=0.8814, HD95_vox=20.49, HD95_mm=16.50
+[08:10:48.864] case0029: DSC=0.7351, HD95_vox=38.93, HD95_mm=30.32
+[08:17:13.525] case0003: DSC=0.5216, HD95_vox=103.80, HD95_mm=82.18
+[08:21:56.226] case0001: DSC=0.8099, HD95_vox=17.53, HD95_mm=13.96
+[08:26:21.171] case0004: DSC=0.8120, HD95_vox=6.49, HD95_mm=5.56
+[08:29:01.179] case0025: DSC=0.8864, HD95_vox=28.20, HD95_mm=21.75
+[08:31:44.621] case0035: DSC=0.8995, HD95_vox=2.81, HD95_mm=2.44
+[08:31:44.634] 
+============================================================
+[08:31:44.634] PER-CLASS RESULTS:
+[08:31:44.634] ============================================================
+[08:31:44.634] Aorta          : DSC=0.8815, HD95_vox=8.68, HD95_mm=7.37
+[08:31:44.634] Gallbladder    : DSC=0.6681, HD95_vox=27.76, HD95_mm=21.53
+[08:31:44.634] Kidney(L)      : DSC=0.7897, HD95_vox=38.80, HD95_mm=30.12
+[08:31:44.634] Kidney(R)      : DSC=0.7973, HD95_vox=45.22, HD95_mm=34.88
+[08:31:44.634] Liver          : DSC=0.9467, HD95_vox=16.05, HD95_mm=13.53
+[08:31:44.634] Pancreas       : DSC=0.6327, HD95_vox=11.06, HD95_mm=9.26
+[08:31:44.634] Spleen         : DSC=0.8909, HD95_vox=28.59, HD95_mm=22.58
+[08:31:44.634] Stomach        : DSC=0.8073, HD95_vox=9.99, HD95_mm=8.96
+[08:31:44.634] 
+============================================================
+[08:31:44.634] \U0001f4ca FINAL RESULTS
+[08:31:44.634] ============================================================
+[08:31:44.634]   Mean Dice:        0.8018 (80.18%)
+[08:31:44.634]   Mean HD95 (voxel): 23.2695
+[08:31:44.634]   Mean HD95 (mm):    18.5299  [voxelspacing=(0.76, 0.76)]
+[08:31:44.634]   TTA:              simple
+[08:31:44.634] ============================================================
+[08:31:44.634] 
+\U0001f4dd Log saved to: ./test_log/test_log_TU_Synapse224_CBAM_HYBRID_Phase3_DS\TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s3456_tta_simple.txt

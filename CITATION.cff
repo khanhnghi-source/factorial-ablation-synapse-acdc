@@ -1,0 +1,54 @@
+cff-version: 1.2.0
+message: "If you use this code or the released results, please cite the paper."
+title: "A controlled factorial ablation of CBAM, BiLSTM and deep supervision in hybrid CNN-Transformer segmentation"
+type: software
+license: Apache-2.0
+version: 1.0.0
+date-released: 2026-09-19
+repository-code: "https://github.com/khanhnghi-source/factorial-ablation-synapse-acdc"
+authors:
+  - family-names: Nghi
+    given-names: Vinh-Khanh
+    orcid: "https://orcid.org/0000-0003-1520-4244"
+    affiliation: "Tra Vinh University, Viet Nam"
+  - family-names: Nguyen
+    given-names: Thai-Son
+    orcid: "https://orcid.org/0000-0001-7008-0462"
+    affiliation: "Tra Vinh University, Viet Nam"
+  - family-names: Tran
+    given-names: Song-Toan
+    orcid: "https://orcid.org/0000-0002-8329-0036"
+    affiliation: "Tra Vinh University, Viet Nam"
+  - family-names: Nguyen
+    given-names: Mong-Hien
+    orcid: "https://orcid.org/0009-0009-2073-2667"
+    affiliation: "Tra Vinh University, Viet Nam"
+  - family-names: Nguyen
+    given-names: Thanh-Nguyen
+    orcid: "https://orcid.org/0009-0007-4331-2476"
+    affiliation: "Tien Giang University, Viet Nam"
+  - family-names: Tran
+    given-names: Van-Thien
+    orcid: "https://orcid.org/0009-0001-0724-1742"
+    affiliation: "Nam Can Tho University, Viet Nam"
+keywords:
+  - medical image segmentation
+  - ablation study
+  - factorial design
+  - negative results
+  - CBAM
+  - BiLSTM
+  - deep supervision
+  - TransUNet
+references:
+  - type: data
+    title: "Trained model checkpoints for the factorial ablation study"
+    doi: 10.5281/zenodo.22833561
+    authors:
+      - name: "The authors"
+  - type: article
+    title: "TransUNet: Transformers Make Strong Encoders for Medical Image Segmentation"
+    year: 2021
+    notes: "arXiv:2102.04306 -- upstream work this repository is derived from (Apache-2.0)"
+    authors:
+      - name: "Chen et al."

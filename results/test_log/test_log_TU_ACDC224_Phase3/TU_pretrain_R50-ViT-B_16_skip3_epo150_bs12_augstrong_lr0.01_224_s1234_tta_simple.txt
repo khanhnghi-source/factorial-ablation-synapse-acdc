@@ -1,0 +1,80 @@
+[15:20:51.921] ============================================================
+[15:20:51.921] 🧪 SeqAtt-UNet PHASE 3 TESTING
+[15:20:51.921] ============================================================
+[15:20:51.921] Dataset:          ACDC
+[15:20:51.921] Model:            ../model/TU_ACDC224_Phase3/TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s1234/best_model.pth
+[15:20:51.921] Deep Supervision: False
+[15:20:51.921] CBAM:             False
+[15:20:51.921] MLP Type:         standard
+[15:20:51.921] TTA:              simple
+[15:20:51.921] Classes:          4
+[15:20:51.921] ============================================================
+[15:20:54.241] ✓ Loaded model from ../model/TU_ACDC224_Phase3/TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s1234/best_model.pth
+[15:20:54.241] 📁 Predictions will be saved to: ../predictions/TU_ACDC224_Phase3_TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s1234_tta_simple
+[15:20:54.241] 📐 HD95 voxelspacing setting: (1.52, 1.52)
+[15:20:54.241]     → Mặc định ACDC: (1.52, 1.52)
+[15:20:55.351] 
+============================================================
+[15:20:55.351] Testing on 40 samples
+[15:20:55.352] TTA: simple
+[15:20:55.352] Voxelspacing (mm): (1.52, 1.52) | report_both_units=True
+[15:20:55.352] ============================================================
+[15:20:58.044] patient001_frame01: DSC=0.8998, HD95_vox=1.14, HD95_mm=1.45
+[15:21:00.529] patient001_frame12: DSC=0.9060, HD95_vox=1.00, HD95_mm=1.35
+[15:21:05.554] patient002_frame12: DSC=0.8859, HD95_vox=1.14, HD95_mm=1.62
+[15:21:07.316] patient002_frame01: DSC=0.9078, HD95_vox=1.00, HD95_mm=1.35
+[15:21:09.220] patient003_frame15: DSC=0.9208, HD95_vox=1.00, HD95_mm=1.35
+[15:21:11.019] patient003_frame01: DSC=0.9076, HD95_vox=1.00, HD95_mm=1.17
+[15:21:12.634] patient004_frame15: DSC=0.9013, HD95_vox=1.14, HD95_mm=1.45
+[15:21:14.250] patient004_frame01: DSC=0.9144, HD95_vox=1.00, HD95_mm=1.35
+[15:21:15.911] patient005_frame01: DSC=0.9252, HD95_vox=1.00, HD95_mm=1.17
+[15:21:17.538] patient005_frame13: DSC=0.9001, HD95_vox=1.00, HD95_mm=1.35
+[15:21:19.340] patient006_frame01: DSC=0.8542, HD95_vox=1.47, HD95_mm=1.96
+[15:21:21.152] patient006_frame16: DSC=0.8209, HD95_vox=1.55, HD95_mm=2.18
+[15:21:22.629] patient007_frame07: DSC=0.9100, HD95_vox=1.00, HD95_mm=1.17
+[15:21:24.122] patient007_frame01: DSC=0.8985, HD95_vox=5.24, HD95_mm=7.77
+[15:21:27.585] patient008_frame13: DSC=0.9150, HD95_vox=1.00, HD95_mm=1.17
+[15:21:29.122] patient008_frame01: DSC=0.9336, HD95_vox=1.00, HD95_mm=1.17
+[15:21:30.647] patient009_frame13: DSC=0.8698, HD95_vox=1.67, HD95_mm=2.31
+[15:21:32.180] patient009_frame01: DSC=0.9094, HD95_vox=1.41, HD95_mm=1.84
+[15:21:33.722] patient010_frame13: DSC=0.9172, HD95_vox=1.00, HD95_mm=1.17
+[15:21:35.288] patient010_frame01: DSC=0.9219, HD95_vox=1.00, HD95_mm=1.17
+[15:21:36.669] patient011_frame08: DSC=0.8797, HD95_vox=1.41, HD95_mm=1.91
+[15:21:38.035] patient011_frame01: DSC=0.8944, HD95_vox=1.14, HD95_mm=1.51
+[15:21:39.475] patient012_frame13: DSC=0.7826, HD95_vox=1.91, HD95_mm=2.70
+[15:21:40.932] patient012_frame01: DSC=0.8988, HD95_vox=1.00, HD95_mm=1.35
+[15:21:42.477] patient013_frame14: DSC=0.9270, HD95_vox=1.00, HD95_mm=1.35
+[15:21:44.023] patient013_frame01: DSC=0.9293, HD95_vox=1.00, HD95_mm=1.00
+[15:21:47.688] patient014_frame01: DSC=0.8740, HD95_vox=1.28, HD95_mm=1.55
+[15:21:49.347] patient014_frame13: DSC=0.9163, HD95_vox=1.00, HD95_mm=1.17
+[15:21:50.803] patient015_frame10: DSC=0.8576, HD95_vox=1.14, HD95_mm=1.45
+[15:21:52.270] patient015_frame01: DSC=0.9248, HD95_vox=1.00, HD95_mm=1.17
+[15:21:53.863] patient016_frame12: DSC=0.9006, HD95_vox=1.14, HD95_mm=1.45
+[15:21:55.433] patient016_frame01: DSC=0.8918, HD95_vox=1.14, HD95_mm=1.62
+[15:21:56.817] patient017_frame09: DSC=0.9141, HD95_vox=1.00, HD95_mm=1.17
+[15:21:58.256] patient017_frame01: DSC=0.8731, HD95_vox=1.14, HD95_mm=1.51
+[15:21:59.525] patient018_frame10: DSC=0.9265, HD95_vox=1.00, HD95_mm=1.00
+[15:22:00.782] patient018_frame01: DSC=0.9227, HD95_vox=1.00, HD95_mm=1.17
+[15:22:02.481] patient019_frame11: DSC=0.9473, HD95_vox=1.00, HD95_mm=1.17
+[15:22:04.203] patient019_frame01: DSC=0.9418, HD95_vox=1.00, HD95_mm=1.17
+[15:22:05.411] patient020_frame11: DSC=0.9013, HD95_vox=1.00, HD95_mm=1.17
+[15:22:06.609] patient020_frame01: DSC=0.8880, HD95_vox=1.00, HD95_mm=1.35
+[15:22:06.609] 
+============================================================
+[15:22:06.609] PER-CLASS RESULTS:
+[15:22:06.609] ============================================================
+[15:22:06.609] RV             : DSC=0.8954, HD95_vox=1.27, HD95_mm=1.62
+[15:22:06.609] Myo            : DSC=0.8466, HD95_vox=1.10, HD95_mm=1.57
+[15:22:06.609] LV             : DSC=0.9588, HD95_vox=1.31, HD95_mm=1.57
+[15:22:06.610] 
+============================================================
+[15:22:06.610] 📊 FINAL RESULTS
+[15:22:06.610] ============================================================
+[15:22:06.610]   Mean Dice:        0.9003 (90.03%)
+[15:22:06.610]   Mean HD95 (voxel): 1.2263
+[15:22:06.610]   Mean HD95 (mm):    1.5864  [voxelspacing=(1.52, 1.52)]
+[15:22:06.610]   TTA:              simple
+[15:22:06.610] ============================================================
+[15:22:06.610]   Predictions saved to: ../predictions/TU_ACDC224_Phase3_TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s1234_tta_simple
+[15:22:06.610] 
+📝 Log saved to: ./test_log/test_log_TU_ACDC224_Phase3/TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s1234_tta_simple.txt

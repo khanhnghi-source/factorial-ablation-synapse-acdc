@@ -1,0 +1,59 @@
+[09:00:17.800] ============================================================
+[09:00:17.800] 🧪 SeqAtt-UNet PHASE 3 TESTING
+[09:00:17.800] ============================================================
+[09:00:17.800] Dataset:          Synapse
+[09:00:17.800] Model:            ../model/TU_Synapse224_BILSTM_Phase3_DS/TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s1234/best_model.pth
+[09:00:17.800] Deep Supervision: True
+[09:00:17.800] CBAM:             False
+[09:00:17.800] MLP Type:         bilstm
+[09:00:17.800] TTA:              simple
+[09:00:17.800] Classes:          9
+[09:00:17.800] ============================================================
+[09:00:17.830] → Building VisionTransformerDS (Phase 3)
+[09:00:24.881] ✓ Deep Supervision DISABLED for inference (single output)
+[09:00:26.734] ✓ Loaded model from ../model/TU_Synapse224_BILSTM_Phase3_DS/TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s1234/best_model.pth
+[09:00:26.734] 📁 Predictions will be saved to: ../predictions/TU_Synapse224_BILSTM_Phase3_DS_TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s1234_tta_simple
+[09:00:26.734] 📐 HD95 voxelspacing setting: (0.76, 0.76)
+[09:00:26.734]     → Mặc định Synapse: (0.76, 0.76)
+[09:00:26.763] 
+============================================================
+[09:00:26.763] Testing on 12 volumes
+[09:00:26.763] TTA: simple
+[09:00:26.763] Voxelspacing (mm): (0.76, 0.76) | report_both_units=True
+[09:00:26.763] ============================================================
+[09:05:35.969] case0008: DSC=0.6753, HD95_vox=11.52, HD95_mm=10.04
+[09:08:35.521] case0022: DSC=0.8855, HD95_vox=22.84, HD95_mm=17.70
+[09:12:01.094] case0038: DSC=0.7835, HD95_vox=12.69, HD95_mm=10.45
+[09:18:41.026] case0036: DSC=0.8667, HD95_vox=4.15, HD95_mm=3.65
+[09:23:43.791] case0032: DSC=0.7936, HD95_vox=16.19, HD95_mm=12.87
+[09:28:31.895] case0002: DSC=0.8638, HD95_vox=22.77, HD95_mm=18.23
+[09:31:50.361] case0029: DSC=0.7724, HD95_vox=38.24, HD95_mm=29.46
+[09:38:59.197] case0003: DSC=0.5771, HD95_vox=101.28, HD95_mm=80.33
+[09:44:10.044] case0001: DSC=0.8025, HD95_vox=8.41, HD95_mm=7.26
+[09:49:06.320] case0004: DSC=0.8129, HD95_vox=7.73, HD95_mm=6.27
+[09:51:59.292] case0025: DSC=0.8941, HD95_vox=23.64, HD95_mm=18.36
+[09:54:48.988] case0035: DSC=0.8976, HD95_vox=19.95, HD95_mm=16.09
+[09:54:48.993] 
+============================================================
+[09:54:48.993] PER-CLASS RESULTS:
+[09:54:48.993] ============================================================
+[09:54:48.993] Aorta          : DSC=0.8801, HD95_vox=11.23, HD95_mm=9.63
+[09:54:48.993] Gallbladder    : DSC=0.6624, HD95_vox=27.93, HD95_mm=21.69
+[09:54:48.993] Kidney(L)      : DSC=0.8189, HD95_vox=37.24, HD95_mm=28.87
+[09:54:48.993] Kidney(R)      : DSC=0.8059, HD95_vox=53.00, HD95_mm=41.36
+[09:54:48.993] Liver          : DSC=0.9483, HD95_vox=13.65, HD95_mm=11.80
+[09:54:48.993] Pancreas       : DSC=0.6451, HD95_vox=10.11, HD95_mm=8.39
+[09:54:48.993] Spleen         : DSC=0.8741, HD95_vox=27.11, HD95_mm=21.21
+[09:54:48.993] Stomach        : DSC=0.7818, HD95_vox=12.66, HD95_mm=10.85
+[09:54:49.000] 
+============================================================
+[09:54:49.000] 📊 FINAL RESULTS
+[09:54:49.000] ============================================================
+[09:54:49.000]   Mean Dice:        0.8021 (80.21%)
+[09:54:49.000]   Mean HD95 (voxel): 24.1179
+[09:54:49.000]   Mean HD95 (mm):    19.2253  [voxelspacing=(0.76, 0.76)]
+[09:54:49.000]   TTA:              simple
+[09:54:49.000] ============================================================
+[09:54:49.001]   Predictions saved to: ../predictions/TU_Synapse224_BILSTM_Phase3_DS_TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s1234_tta_simple
+[09:54:49.001] 
+📝 Log saved to: ./test_log/test_log_TU_Synapse224_BILSTM_Phase3_DS/TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s1234_tta_simple.txt

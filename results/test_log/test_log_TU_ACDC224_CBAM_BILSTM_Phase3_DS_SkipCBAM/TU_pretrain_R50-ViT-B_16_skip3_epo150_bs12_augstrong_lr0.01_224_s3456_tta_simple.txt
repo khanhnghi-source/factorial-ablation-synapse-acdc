@@ -1,0 +1,92 @@
+[19:08:28.339] ============================================================
+[19:08:28.339] \U0001f9ea SeqAtt-UNet PHASE 4 (Skip-CBAM) TESTING
+[19:08:28.339] ============================================================
+[19:08:28.339] Dataset:                ACDC
+[19:08:28.339] Model (Skip-CBAM):      ..\model\TU_ACDC224_CBAM_BILSTM_Phase3_DS_SkipCBAM\TU_pretrain_R50-ViT-B_16_skip3_epo150_bs12_augstrong_lr0.01_224_s3456\best_model.pth
+[19:08:28.339] CBAM:                   True
+[19:08:28.339] MLP Type:               bilstm
+[19:08:28.340] Skip-CBAM reduction:    8
+[19:08:28.340] TTA:                    simple
+[19:08:28.340] ============================================================
+[19:08:46.283] \u2713 Built VisionTransformerSkipCBAM with DS DISABLED for inference
+[19:08:47.238] \u2713 Loaded checkpoint
+[19:08:47.239] 
+\U0001f4ca CBAM Alpha Values:
+[19:08:47.240]    transformer.embeddings.hybrid_model.cbam1.alpha_raw: -2.2101
+[19:08:47.240]    transformer.embeddings.hybrid_model.cbam2.alpha_raw: -2.2205
+[19:08:47.240]    transformer.embeddings.hybrid_model.cbam3.alpha_raw: -2.1805
+[19:08:47.240]    decoder.blocks.0.skip_cbam.alpha_raw: -2.2290
+[19:08:47.240]    decoder.blocks.1.skip_cbam.alpha_raw: -2.2120
+[19:08:47.240]    decoder.blocks.2.skip_cbam.alpha_raw: -2.1736
+[19:08:47.244] 
+[Skip-CBAM \u03b1 values after training]
+[19:08:47.245]    encoder_cbam1: 0.1041
+[19:08:47.245]    encoder_cbam2: 0.1031
+[19:08:47.245]    encoder_cbam3: 0.1070
+[19:08:47.245]    encoder_skip_cbam: 0.1077
+[19:08:47.245]    skip_cbam_block0: 0.1022
+[19:08:47.245]    skip_cbam_block1: 0.1039
+[19:08:47.245]    skip_cbam_block2: 0.1077
+[19:08:47.245] \U0001f4d0 HD95 voxelspacing: (1.52, 1.52)
+[19:08:47.279] 
+============================================================
+[19:08:47.279] Testing on 40 samples
+[19:08:47.279] TTA: simple
+[19:08:47.279] Voxelspacing (mm): (1.52, 1.52) | report_both_units=True
+[19:08:47.279] ============================================================
+[19:08:56.339] patient001_frame01: DSC=0.8970, HD95_vox=1.14, HD95_mm=1.45
+[19:09:05.084] patient001_frame12: DSC=0.9048, HD95_vox=1.00, HD95_mm=1.35
+[19:09:13.909] patient002_frame01: DSC=0.9081, HD95_vox=1.00, HD95_mm=1.17
+[19:09:22.690] patient002_frame12: DSC=0.8910, HD95_vox=1.14, HD95_mm=1.45
+[19:09:31.664] patient003_frame01: DSC=0.9140, HD95_vox=1.00, HD95_mm=1.17
+[19:09:40.620] patient003_frame15: DSC=0.9248, HD95_vox=1.00, HD95_mm=1.35
+[19:09:49.395] patient004_frame01: DSC=0.9149, HD95_vox=1.00, HD95_mm=1.35
+[19:09:58.153] patient004_frame15: DSC=0.9070, HD95_vox=1.14, HD95_mm=1.45
+[19:10:06.905] patient005_frame01: DSC=0.9256, HD95_vox=1.00, HD95_mm=1.35
+[19:10:15.675] patient005_frame13: DSC=0.9003, HD95_vox=1.00, HD95_mm=1.35
+[19:10:25.281] patient006_frame01: DSC=0.8750, HD95_vox=1.28, HD95_mm=1.72
+[19:10:34.906] patient006_frame16: DSC=0.8433, HD95_vox=1.24, HD95_mm=1.80
+[19:10:43.565] patient007_frame01: DSC=0.9185, HD95_vox=1.00, HD95_mm=1.35
+[19:10:52.190] patient007_frame07: DSC=0.8856, HD95_vox=1.00, HD95_mm=1.17
+[19:11:00.866] patient008_frame01: DSC=0.9375, HD95_vox=1.00, HD95_mm=1.17
+[19:11:09.565] patient008_frame13: DSC=0.9172, HD95_vox=1.00, HD95_mm=1.17
+[19:11:18.260] patient009_frame01: DSC=0.9025, HD95_vox=1.33, HD95_mm=1.51
+[19:11:26.960] patient009_frame13: DSC=0.8544, HD95_vox=1.41, HD95_mm=1.91
+[19:11:35.674] patient010_frame01: DSC=0.9297, HD95_vox=1.00, HD95_mm=1.17
+[19:11:44.393] patient010_frame13: DSC=0.9084, HD95_vox=1.00, HD95_mm=1.17
+[19:11:52.242] patient011_frame01: DSC=0.9018, HD95_vox=1.33, HD95_mm=1.85
+[19:12:00.066] patient011_frame08: DSC=0.8874, HD95_vox=1.41, HD95_mm=2.03
+[19:12:08.701] patient012_frame01: DSC=0.8984, HD95_vox=1.00, HD95_mm=1.35
+[19:12:17.323] patient012_frame13: DSC=0.7682, HD95_vox=2.19, HD95_mm=3.00
+[19:12:26.026] patient013_frame01: DSC=0.9224, HD95_vox=1.00, HD95_mm=1.17
+[19:12:34.671] patient013_frame14: DSC=0.9190, HD95_vox=1.00, HD95_mm=1.35
+[19:12:43.170] patient014_frame01: DSC=0.8855, HD95_vox=1.14, HD95_mm=1.45
+[19:12:51.625] patient014_frame13: DSC=0.9247, HD95_vox=1.00, HD95_mm=1.17
+[19:12:59.293] patient015_frame01: DSC=0.9293, HD95_vox=1.00, HD95_mm=1.17
+[19:13:06.993] patient015_frame10: DSC=0.8620, HD95_vox=1.14, HD95_mm=1.45
+[19:13:15.500] patient016_frame01: DSC=0.8737, HD95_vox=1.14, HD95_mm=1.68
+[19:13:23.979] patient016_frame12: DSC=0.8974, HD95_vox=1.24, HD95_mm=1.63
+[19:13:31.696] patient017_frame01: DSC=0.8671, HD95_vox=1.33, HD95_mm=1.63
+[19:13:39.426] patient017_frame09: DSC=0.9141, HD95_vox=1.00, HD95_mm=1.17
+[19:13:46.252] patient018_frame01: DSC=0.9210, HD95_vox=1.00, HD95_mm=1.17
+[19:13:53.082] patient018_frame10: DSC=0.9299, HD95_vox=1.00, HD95_mm=1.00
+[19:14:02.416] patient019_frame01: DSC=0.9424, HD95_vox=1.00, HD95_mm=1.17
+[19:14:11.761] patient019_frame11: DSC=0.9434, HD95_vox=1.00, HD95_mm=1.17
+[19:14:18.555] patient020_frame01: DSC=0.9270, HD95_vox=1.00, HD95_mm=1.17
+[19:14:25.330] patient020_frame11: DSC=0.9232, HD95_vox=1.00, HD95_mm=1.17
+[19:14:25.331] 
+============================================================
+[19:14:25.332] PER-CLASS RESULTS:
+[19:14:25.332] ============================================================
+[19:14:25.332] RV             : DSC=0.8943, HD95_vox=1.27, HD95_mm=1.59
+[19:14:25.332] Myo            : DSC=0.8536, HD95_vox=1.07, HD95_mm=1.56
+[19:14:25.332] LV             : DSC=0.9594, HD95_vox=1.00, HD95_mm=1.09
+[19:14:25.332] 
+============================================================
+[19:14:25.332] \U0001f4ca FINAL RESULTS (Phase 4 Skip-CBAM)
+[19:14:25.332] ============================================================
+[19:14:25.333]   Mean Dice:         0.9024 (90.24%)
+[19:14:25.333]   Mean HD95 (voxel): 1.1153
+[19:14:25.333]   Mean HD95 (mm):    1.4134  [voxelspacing=(1.52, 1.52)]
+[19:14:25.333]   TTA:               simple
+[19:14:25.333] ============================================================
