@@ -7,7 +7,12 @@
 # pip install torch==2.4.1 torchvision==0.19.1 --index-url https://download.pytorch.org/whl/cu121
 # Do NOT pip-upgrade torch from PyPI default (would install CPU-only build)
 numpy>=1.24.0
-scipy>=1.10.0
+# Pinned, not a floor: every p-value in the paper reproduces under this version.
+# scipy.stats.wilcoxon decides between the exact null distribution and the normal
+# approximation on its own, and where that boundary falls has moved between
+# releases, so a different scipy can return a different p-value from identical
+# inputs. Section IV-F of the paper states this pin.
+scipy==1.15.3
 scikit-learn>=1.3.0
 scikit-image>=0.21.0
 medpy>=0.4.0

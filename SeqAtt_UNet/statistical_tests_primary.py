@@ -84,10 +84,32 @@ def wilcoxon_one_test(values_A: np.ndarray, values_B: np.ndarray,
     }
 
 
-def per_patient_mean(df_pat, dataset, config, metric):
-    """Mean over seeds, one value per patient."""
+def per_patient_mean(df_pat, dataset, config, metric, collapse_phases: bool = False):
+    """Mean over seeds, one value per statistical unit.
+
+    Parameters
+    ----------
+    collapse_phases : bool
+        False (default) gives one value per ``case``. On ACDC a case is
+        ``patientNNN_frameNN``, so this is one value per patient-PHASE and the
+        20 test patients give n = 40.
+
+        True additionally averages the two cardiac phases of each patient,
+        giving n = 20 statistically independent units. Reviewer 2's comment
+        R2.1 asked for this sensitivity analysis: a patient's ED and ES volumes
+        are correlated, so n = 40 is not 40 independent samples. Synapse case
+        identifiers carry no phase, so the option is a no-op there.
+
+        Added 2026-09-24. The n = 20 column of Table VI was previously computed
+        outside this file, which meant a reader running the released scripts
+        could reproduce the n = 40 column and not the n = 20 one. It is now
+        produced by the same code path as everything else.
+    """
     sub = df_pat[(df_pat['dataset'] == dataset) & (df_pat['config'] == config)]
-    return sub.groupby('case')[metric].mean()
+    if not collapse_phases:
+        return sub.groupby('case')[metric].mean()
+    unit = sub['case'].astype(str).str.split('_').str[0]
+    return sub.groupby(unit)[metric].mean()
 
 
 # =============================================================================
@@ -159,6 +181,19 @@ def run_primary_endpoints(df_pat: pd.DataFrame) -> pd.DataFrame:
 
         res = wilcoxon_one_test(a, b, alternative=ep['alternative'])
 
+        # R2.1 sensitivity analysis: repeat with the two cardiac phases of each
+        # ACDC patient averaged, so the units are independent (n = 20).
+        # Reported alongside the n = 40 result in Table VI.
+        a2 = per_patient_mean(df_pat, ep['dataset'], ep['config_A'],
+                              ep['metric'], collapse_phases=True)
+        b2 = per_patient_mean(df_pat, ep['dataset'], ep['config_B'],
+                              ep['metric'], collapse_phases=True)
+        common2 = a2.index.intersection(b2.index)
+        res2 = wilcoxon_one_test(a2.loc[common2].values,
+                                 b2.loc[common2].values,
+                                 alternative=ep['alternative'])
+        collapsed = res2['n'] < res['n']      # False on Synapse: nothing to collapse
+
         sig = '***' if res['p_value'] < 0.001 \
             else '**' if res['p_value'] < 0.01 \
             else '*' if res['p_value'] < 0.05 else 'n.s.'
@@ -168,6 +203,9 @@ def run_primary_endpoints(df_pat: pd.DataFrame) -> pd.DataFrame:
         print(f"    B = {ep['config_B']:25s} mean={res['mean_B']:.4f}")
         print(f"    n={res['n']}, alt={ep['alternative']}, "
               f"W={res['W']:.1f}, p={res['p_value']:.4f}  {sig}")
+        if collapsed:
+            print(f"    phases averaged per patient: n={res2['n']}, "
+                  f"p={res2['p_value']:.4f}")
         print(f"    Cohen's d (paired) = {res['cohen_d']:.3f}")
 
         rows.append({
@@ -186,6 +224,8 @@ def run_primary_endpoints(df_pat: pd.DataFrame) -> pd.DataFrame:
             'p_value':     res['p_value'],
             'significance': sig,
             'cohen_d':     res['cohen_d'],
+            'n_collapsed': res2['n'] if collapsed else None,
+            'p_collapsed': res2['p_value'] if collapsed else None,
             'rationale':   ep['rationale'],
         })
 
